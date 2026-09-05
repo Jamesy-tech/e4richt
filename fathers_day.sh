@@ -1,4 +1,4 @@
-```bash
+bash
 #!/bin/bash
 
 clear
@@ -6,7 +6,7 @@ clear
 printf '\n'
 printf '        *        .       *       .        *\n'
 printf '   .       *   .    *       .    *   .       *\n'
-printf '       *       HAPPY FATHER'"'"'S DAY!       *\n'
+printf '       *       Happy Father's"'"'S Day!       *\n'
 printf '   *       .       *       .       *       .\n'
 printf '\n'
 
@@ -15,24 +15,16 @@ sleep 0.5
 cat << 'EOF'
 
 ==============================================================
-                    HAPPY FATHER'S DAY, DAD!
+                    Happy Father's Day!
 ==============================================================
 
                          /\_/\\
                         ( o.o )
                          > ^ <
 
-              Today is all about YOU!
+           Thank you for everything you've done
 
-        Thanks for all the things you do for me,
-        for always being there when I need you,
-        for helping me, teaching me new things,
-        and for all the little things that don't
-        always get noticed but mean a lot.
-
-        I really appreciate having you as my dad.
-
-                     HAPPY FATHER'S DAY!
+        
 
 ==============================================================
 
@@ -40,7 +32,7 @@ cat << 'EOF'
     .     *    .     *    .     *    .     *    .
        *    .    *    .    *    .    *    .    *
 
-                 THANK YOU, DAD!
+                  Thank you, Dad!!
 
        *    .    *    .    *    .    *    .    *
     .     *    .     *    .     *    .     *    .
@@ -51,6 +43,5 @@ cat << 'EOF'
 EOF
 
 printf '\n'
-printf '                 Have an awesome day, Dad!\n'
+printf '                 Have an awesome day!\n'
 printf '\n'
-```
