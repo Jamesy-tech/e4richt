@@ -3,12 +3,12 @@
 clear
 
 cols=$(tput cols)
-rows=$(tput lines)
+confetti_rows=5
+amount=15
 
-for ((i=0; i<35; i++)); do
+for ((i=0; i<amount; i++)); do
     x[$i]=$((RANDOM % cols + 1))
-    y[$i]=$((RANDOM % rows + 1))
-    speed[$i]=$((RANDOM % 3 + 1))
+    y[$i]=$((RANDOM % confetti_rows + 1))
 done
 
 printf '\n'
@@ -17,6 +17,8 @@ printf '   .       *   .    *       .    *   .       *\n'
 printf '       *       Happy Father'"'"'s Day!       *\n'
 printf '   *       .       *       .       *       .\n'
 printf '\n'
+
+sleep 0.5
 
 cat << 'EOF'
 
@@ -45,13 +47,14 @@ cat << 'EOF'
 EOF
 
 while true; do
-    for ((i=0; i<35; i++)); do
-        y[$i]=$((y[$i] + speed[$i]))
+    for ((i=0; i<amount; i++)); do
+        printf "\033[${y[$i]};${x[$i]}H "
 
-        if [ ${y[$i]} -gt $rows ]; then
+        y[$i]=$((y[$i] + 1))
+
+        if [ ${y[$i]} -gt $confetti_rows ]; then
             y[$i]=1
             x[$i]=$((RANDOM % cols + 1))
-            speed[$i]=$((RANDOM % 3 + 1))
         fi
 
         printf "\033[${y[$i]};${x[$i]}H"
@@ -66,5 +69,5 @@ while true; do
         esac
     done
 
-    sleep 0.08
+    sleep 0.15
 done
